@@ -61,22 +61,42 @@ int main()
         if (choice == selectcircleArea) {
             cout << "Enter the radius of the circle: ";
             cin >> radius;
+            if (radius < 0) { // if statement if user enters a negative integer
+                cout << "Please enter a positive integer for the radius: ";
+                cin >> radius;
+            }
             double circleArea = PI * (pow(radius, 2));
             cout << fixed << setprecision(5) << "The Area of the circle is " << circleArea;
         }
             else if (choice == selectrectangleArea) {
                 cout << "Enter the length of the rectangle: ";
                 cin >> length;
+                if (length < 0) { //If statement if user enters a negative integer
+                    cout << "Please enter a positive integer for the length: ";
+                    cin >> length;
+                }
                 cout << "Enter the width of the rectangle: ";
                 cin >> width;
+                if (width < 0) { //if statement if user enters a negative integer
+                    cout << "Please enter a positive integer for the width: ";
+                    cin >> width;
+                }
                 double rectangleArea = length * width;
                 cout << "The Area of the rectangle is " << rectangleArea;
             }
                 else if (choice == selecttriangleArea) {
                     cout << "Enter the base of the triangle: ";
                     cin >> base;
+                    if (base < 0) {
+                        cout << "Please enter a positive integer for the base: ";
+                        cin >> base;
+                    }
                     cout << "Enter the height of the triangle: ";
                     cin >> height;
+                    if (height < 0) {
+                        cout << "Please enter a positive integer for the height: ";
+                        cin >> height;
+                    }
                     double triangleArea = base * height * 0.5;
                     cout << "The Area of the triangle is " << triangleArea;
                 }
