@@ -22,12 +22,6 @@ int main()
     int choice; //To hold a menu choice
     double area = 0; //Placeholder value
     
-    //Menu Variables
-    const int selectcircleArea = 1,
-              selectrectangleArea = 2,
-              selecttriangleArea = 3,
-              selectQuit = 4;
-    
     
     //Circle Variables
     double radius = 0; 
@@ -52,6 +46,102 @@ int main()
     cout << setw(39) << right << "" << "Enter your choice (1-4): ";
     cin >> choice;
     
+    switch (choice)
+    {
+        case 1:
+        
+            cout << "What is the radius of the circle: ";
+            cin >> radius;
+
+            if (radius > 0) {
+                cout << "Enter the radius of the circle: ";
+                cin >> radius;
+                double circleArea = PI * (pow(radius, 2));
+                cout << fixed << setprecision(5) << "The Area of the circle is " << circleArea;
+            }
+                else {
+                    cout << "Please enter a positive integer: ";
+                    cin >> radius;
+                    cout << endl;
+                }
+        
+        case 2:
+
+            if (length || width < 0) {
+                cout << "Please enter a positive integer: ";
+          
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     //Response to user's choice if not between 1-4
     while (choice < 1 || choice > 4) {
         cout << "Enter a number between 1-4: ";
@@ -63,6 +153,10 @@ int main()
             cin >> radius;
             double circleArea = PI * (pow(radius, 2));
             cout << fixed << setprecision(5) << "The Area of the circle is " << circleArea;
+        }
+        else (radius < 0) {
+
+
         }
             else if (choice == selectrectangleArea) {
                 cout << "Enter the length of the rectangle: ";
@@ -83,7 +177,7 @@ int main()
                     else if (choice == selectQuit) {
                         cout << "Quitting Program!";    
                     }
-
+*/
 
 
 }
